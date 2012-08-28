@@ -1,11 +1,3 @@
-//
-//  AppDelegate.m
-//  GraphView
-//
-//  Created by Rob Mayoff on 8/28/12.
-//  Copyright (c) 2012 Rob Mayoff. All rights reserved.
-//
-
 #import "AppDelegate.h"
 
 #import "ViewController.h"

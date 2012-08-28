@@ -1,29 +1,33 @@
-//
-//  ViewController.m
-//  GraphView
-//
-//  Created by Rob Mayoff on 8/28/12.
-//  Copyright (c) 2012 Rob Mayoff. All rights reserved.
-//
-
 #import "ViewController.h"
+#import "GraphView.h"
 
 @interface ViewController ()
 
 @end
 
-@implementation ViewController
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+@implementation ViewController {
+    IBOutlet GraphView *_myView;
+    NSTimer *_timer;
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation {
+    return YES;
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    _timer = [NSTimer timerWithTimeInterval:0.1 target:self selector:@selector(timerDidFire:) userInfo:nil repeats:YES];
+    [[NSRunLoop mainRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [_timer invalidate];
+    _timer = nil;
+}
+
+- (void)timerDidFire:(NSTimer *)timer {
+    [_myView addRandomSample];
 }
 
 @end

@@ -15,6 +15,8 @@
 		31441CA315ED86EF00F36EF4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 31441CA215ED86EF00F36EF4 /* AppDelegate.m */; };
 		31441CA615ED86EF00F36EF4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31441CA515ED86EF00F36EF4 /* ViewController.m */; };
 		31441CA915ED86EF00F36EF4 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31441CA715ED86EF00F36EF4 /* ViewController.xib */; };
+		31441CB015ED86FF00F36EF4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31441CAF15ED86FF00F36EF4 /* QuartzCore.framework */; };
+		31441CB315ED871800F36EF4 /* GraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31441CB215ED871500F36EF4 /* GraphView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,9 @@
 		31441CA415ED86EF00F36EF4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		31441CA515ED86EF00F36EF4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		31441CA815ED86EF00F36EF4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		31441CAF15ED86FF00F36EF4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		31441CB115ED871500F36EF4 /* GraphView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GraphView.h; sourceTree = "<group>"; };
+		31441CB215ED871500F36EF4 /* GraphView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GraphView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31441CB015ED86FF00F36EF4 /* QuartzCore.framework in Frameworks */,
 				31441C9315ED86EF00F36EF4 /* UIKit.framework in Frameworks */,
 				31441C9515ED86EF00F36EF4 /* Foundation.framework in Frameworks */,
 				31441C9715ED86EF00F36EF4 /* CoreGraphics.framework in Frameworks */,
@@ -67,6 +73,7 @@
 		31441C9115ED86EF00F36EF4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				31441CAF15ED86FF00F36EF4 /* QuartzCore.framework */,
 				31441C9215ED86EF00F36EF4 /* UIKit.framework */,
 				31441C9415ED86EF00F36EF4 /* Foundation.framework */,
 				31441C9615ED86EF00F36EF4 /* CoreGraphics.framework */,
@@ -81,6 +88,8 @@
 				31441CA215ED86EF00F36EF4 /* AppDelegate.m */,
 				31441CA415ED86EF00F36EF4 /* ViewController.h */,
 				31441CA515ED86EF00F36EF4 /* ViewController.m */,
+				31441CB115ED871500F36EF4 /* GraphView.h */,
+				31441CB215ED871500F36EF4 /* GraphView.m */,
 				31441CA715ED86EF00F36EF4 /* ViewController.xib */,
 				31441C9915ED86EF00F36EF4 /* Supporting Files */,
 			);
@@ -164,6 +173,7 @@
 				31441C9F15ED86EF00F36EF4 /* main.m in Sources */,
 				31441CA315ED86EF00F36EF4 /* AppDelegate.m in Sources */,
 				31441CA615ED86EF00F36EF4 /* ViewController.m in Sources */,
+				31441CB315ED871800F36EF4 /* GraphView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,6 +252,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GraphView/GraphView-Prefix.pch";
 				INFOPLIST_FILE = "GraphView/GraphView-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -253,6 +264,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GraphView/GraphView-Prefix.pch";
 				INFOPLIST_FILE = "GraphView/GraphView-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
